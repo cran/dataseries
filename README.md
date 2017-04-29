@@ -9,11 +9,12 @@ The packages contains a single function, `ds`, which downloads series from
 
 To install:
 
-    if (!require("devtools")) install.packages("devtools")
-    devtools::install_github("christophsax/dataseries")
+    install.packages("dataseries")
 
 Usage:
 
     dataseries::ds(c("CCI.AIK", "CCI.ASSS"))
-    dataseries::ds(c("CCI.AIK", "CCI.ASSS"), class = "xts")
+    dataseries::ds(c("CCI.AIK", "CCI.ASSS"), "ts")
+    dataseries::ds(c("CCI.AIK", "CCI.ASSS"), "xts")
 
+    dataseries::inventory()  # inventory of all available series
